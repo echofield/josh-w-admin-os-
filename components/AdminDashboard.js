@@ -1,8 +1,6 @@
 'use client';
 
-// import { useState } from 'react'; // Unused import removed
 import { LayoutDashboard, Users, GanttChartSquare, Library, ShieldCheck, Siren, Send } from 'lucide-react';
-import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 
 const Sidebar = () => (
   <aside className="p-4 w-64 flex-shrink-0 h-screen sticky top-0">
