@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-export async function POST() { // 'request' parameter removed
+export async function POST() {
   try {
     const clientName = "Tech Startup";
     const task = "Reddit Community Infiltration";
@@ -26,3 +26,4 @@ export async function POST() { // 'request' parameter removed
     const errorMessage = error.message || 'An unknown error occurred.';
     return NextResponse.json({ error: `Failed to generate AI prompt: ${errorMessage}` }, { status: 500 });
   }
+} // <-- This was the missing curly brace. It is now fixed.
