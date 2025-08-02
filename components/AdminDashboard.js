@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react'; // Unused import removed
 import { LayoutDashboard, Users, GanttChartSquare, Library, ShieldCheck, Siren, Send } from 'lucide-react';
+import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 
 const Sidebar = () => (
   <aside className="p-4 w-64 flex-shrink-0 h-screen sticky top-0">
@@ -31,7 +32,7 @@ const Sidebar = () => (
             </button>
         </nav>
         <div className="mt-8 pt-6 border-t border-white/20">
-            <p className="text-xs text-violet-200">Powered by Josh's Growth Methodology</p>
+            <p className="text-xs text-violet-200">Powered by Josh&apos;s Growth Methodology</p>
         </div>
     </div>
   </aside>
@@ -43,7 +44,7 @@ const SmartNudge = () => (
             <Siren className="w-6 h-6 text-teal-500 flex-shrink-0 mt-1" />
             <div className="flex-1">
                 <h3 className="text-lg mb-2 text-slate-900 font-semibold">Growth Hack Behind Schedule</h3>
-                <p className="text-sm mb-3 text-slate-600">Hey <span className="font-bold">Tech Startup</span>, I noticed you haven't implemented the <span className="italic">Reddit Community Infiltration</span> growth hack yet. In my experience, this typically drives <span className="font-bold text-slate-800">50+ leads/month</span> within 2 weeks. Should we schedule a quick audit to get you unstuck?</p>
+                <p className="text-sm mb-3 text-slate-600">Hey <span className="font-bold">Tech Startup</span>, I noticed you haven&apos;t implemented the <span className="italic">Reddit Community Infiltration</span> growth hack yet. In my experience, this typically drives <span className="font-bold text-slate-800">50+ leads/month</span> within 2 weeks. Should we schedule a quick audit to get you unstuck?</p>
                 <div className="flex justify-end gap-2 mt-4">
                     <button className="px-3 py-1 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors text-sm">Dismiss</button>
                     <button className="px-3 py-1 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors text-sm">Schedule Audit</button>
@@ -122,7 +123,7 @@ export default function AdminDashboard() {
                          <p className="text-sm text-slate-500 mb-2">Client Portfolio</p>
                          <div className="space-y-2">
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">🚀 Tech Startups</span> <span className="font-semibold text-slate-800">5</span></div>
-                            <div className="flex items-center justify-between text-sm"><span className="flex items-center">💼 B2B SaaS</span> <span className="font-semibold text-slate-800">4</span></div>
+                            <div className="flex items-center justify-between text-sm"><span className="flex items-center">  B2B SaaS</span> <span className="font-semibold text-slate-800">4</span></div>
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">👗 Fashion & Apparel</span> <span className="font-semibold text-slate-800">3</span></div>
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">💪 Sports & Fitness</span> <span className="font-semibold text-slate-800">2</span></div>
                          </div>
@@ -134,3 +135,4 @@ export default function AdminDashboard() {
     </div>
   );
 }
+ 
