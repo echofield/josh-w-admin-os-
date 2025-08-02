@@ -1,9 +1,11 @@
+# 1. Replace the entire file with clean, correct code
+@"
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-export async function POST() { // 'request' parameter removed
+export async function POST() {
   try {
     const clientName = "Tech Startup";
     const task = "Reddit Community Infiltration";
@@ -26,3 +28,13 @@ export async function POST() { // 'request' parameter removed
     const errorMessage = error.message || 'An unknown error occurred.';
     return NextResponse.json({ error: `Failed to generate AI prompt: ${errorMessage}` }, { status: 500 });
   }
+}
+"@ | Set-Content -Path app/api/generate/route.js -NoNewline
+
+# 2. Verify the fix
+$file = Get-Item app/api/generate/route.js
+$stream = $file.OpenRead()
+$stream.Seek(-1, [System.IO.SeekOrigin]::End) | Out-Null
+$lastByte = $stream.ReadByte()
+$stream.Close()
+Write-Host "Last character is now: '$([char]$lastByte)' (ASCII: $lastByte)"
