@@ -123,7 +123,7 @@ export default function AdminDashboard() {
                          <p className="text-sm text-slate-500 mb-2">Client Portfolio</p>
                          <div className="space-y-2">
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">🚀 Tech Startups</span> <span className="font-semibold text-slate-800">5</span></div>
-                            <div className="flex items-center justify-between text-sm"><span className="flex items-center">  B2B SaaS</span> <span className="font-semibold text-slate-800">4</span></div>
+                            <div className="flex items-center justify-between text-sm"><span className="flex items-center">💼 B2B SaaS</span> <span className="font-semibold text-slate-800">4</span></div>
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">👗 Fashion & Apparel</span> <span className="font-semibold text-slate-800">3</span></div>
                             <div className="flex items-center justify-between text-sm"><span className="flex items-center">💪 Sports & Fitness</span> <span className="font-semibold text-slate-800">2</span></div>
                          </div>
@@ -135,4 +135,3 @@ export default function AdminDashboard() {
     </div>
   );
 }
- 
