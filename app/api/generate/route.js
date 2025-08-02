@@ -26,4 +26,4 @@ export async function POST() {
     const errorMessage = error.message || 'An unknown error occurred.';
     return NextResponse.json({ error: `Failed to generate AI prompt: ${errorMessage}` }, { status: 500 });
   }
-}
+} // <-- THIS IS THE MISSING BRACE
